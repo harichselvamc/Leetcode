@@ -12,11 +12,11 @@ class Solution(object):
             else:
                 freq[number]=1
         
-        maximum=0
+        maximum=max(freq.values())
 
-        for value in freq.values():
-            if value>maximum:
-                maximum=value
+        # for value in freq.values():
+        #     if value>maximum:
+        #         maximum=value
 
         
         count =0 
