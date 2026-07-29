@@ -12,7 +12,12 @@ class Solution(object):
             else:
                 dicst[num]=1
     
-        maximum=max(dicst.values())
+        # maximum=max(dicst.values())
+        maximum=0
+
+        for value in dicst.values():
+            if value>maximum:
+                maximum=value
 
         value=0
 
