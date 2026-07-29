@@ -4,26 +4,29 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        dicst={}
+        freq={}
 
-        for num in nums:
-            if num in dicst:
-                dicst[num]=dicst[num]+1
+        for number in nums:
+            if number in freq:
+                freq[number]=freq[number]+1
             else:
-                dicst[num]=1
-    
-        # maximum=max(dicst.values())
+                freq[number]=1
+        
         maximum=0
 
-        for value in dicst.values():
+        for value in freq.values():
             if value>maximum:
                 maximum=value
 
-        value=0
+        
+        count =0 
 
-        for number in dicst.values():
-            if number==maximum:
-                value=value+number
+        for digit in freq.values():
+            if digit==maximum:
+                count=count+1
+        
+
+        return count*maximum
 
 
-        return value        
+        
