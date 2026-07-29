@@ -23,10 +23,10 @@ class Solution(object):
 
         for digit in freq.values():
             if digit==maximum:
-                count=count+1
+                count=count+digit
         
 
-        return count*maximum
+        return count
 
 
         
